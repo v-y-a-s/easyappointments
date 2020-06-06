@@ -61,7 +61,7 @@
 
     <div class="content container-fluid">
         <div class="welcome">
-            <h3>Welcome to the Easy!Appointments installation page.</h3>
+            <h3>Welcome to the Easy! Hosted by Freshworks Studio.</h3>
             <p>
                 This page will help you set the main settings of your Easy!Appointments installation.
                 You will be able to edit these settings and many more in the backend session of your
