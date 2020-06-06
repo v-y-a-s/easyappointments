@@ -34,14 +34,56 @@ function is_ea_installed()
  *
  * @return array
  */
-function get_sample_service()
+function get_ui_service()
 {
     return [
-        'name' => 'Test Service',
+        'name' => 'UI/UX Consulting',
         'duration' => 30,
         'price' => 50.0,
         'currency' => 'Euro',
-        'description' => 'This is a test service automatically inserted by the installer.',
+        'description' => 'UI/UX Consulting for your Mobile, Web, AR, VR Next Get application.',
+        'availabilities_type' => 'flexible',
+        'attendants_number' => 1,
+        'id_service_categories' => NULL
+    ];
+}
+
+function get_qa_service()
+{
+    return [
+        'name' => 'Quality Analyst Consulting',
+        'duration' => 30,
+        'price' => 50.0,
+        'currency' => 'Euro',
+        'description' => 'Quality Analysis for your Groundbreaking Product',
+        'availabilities_type' => 'flexible',
+        'attendants_number' => 1,
+        'id_service_categories' => NULL
+    ];
+}
+
+function get_dev_service()
+{
+    return [
+        'name' => 'Software Development Consulting',
+        'duration' => 30,
+        'price' => 50.0,
+        'currency' => 'Euro',
+        'description' => 'Consult our Multi Platform Expert for Software Development Problems',
+        'availabilities_type' => 'flexible',
+        'attendants_number' => 1,
+        'id_service_categories' => NULL
+    ];
+}
+
+function get_arch_service()
+{
+    return [
+        'name' => 'Solutions Architecture Consulting',
+        'duration' => 30,
+        'price' => 50.0,
+        'currency' => 'Euro',
+        'description' => 'Consult our Solutions Architect to Design your Application Platform',
         'availabilities_type' => 'flexible',
         'attendants_number' => 1,
         'id_service_categories' => NULL
@@ -53,16 +95,82 @@ function get_sample_service()
  *
  * @return array
  */
-function get_sample_provider()
+function get_ui_provider()
 {
     return [
-        'first_name' => 'John',
-        'last_name' => 'Doe',
-        'email' => 'john@doe.com',
-        'phone_number' => '0123456789',
+        'first_name' => 'Khanh',
+        'last_name' => 'Dinh',
+        'email' => 'khanh@freshworks.io',
+        'phone_number' => '+ 1(250)412-3470',
         'services' => [],
         'settings' => [
-            'username' => 'johndoe',
+            'username' => 'khanh',
+            'password' => '59fe9d073a9c3c606a7e01e402dca4b49b6aa517bd0fdf940c46cb13a7b63dd0',
+            'salt' => 'dc5570debc71fc1fe94b1b0aee444fcde5b8cb83d62a6a2b736ead6557d7a2e1',
+            'working_plan' => '{"monday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"tuesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"wednesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"thursday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"friday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"saturday":null,"sunday":null}',
+            'notifications' => FALSE,
+            'google_sync' => FALSE,
+            'sync_past_days' => 5,
+            'sync_future_days' => 5,
+            'calendar_view' => CALENDAR_VIEW_DEFAULT
+        ]
+    ];
+}
+
+function get_qa_provider()
+{
+    return [
+        'first_name' => 'Rai',
+        'last_name' => 'Arya',
+        'email' => 'rai@freshworks.io',
+        'phone_number' => '+ 1(250)412-3470',
+        'services' => [],
+        'settings' => [
+            'username' => 'rai',
+            'password' => '59fe9d073a9c3c606a7e01e402dca4b49b6aa517bd0fdf940c46cb13a7b63dd0',
+            'salt' => 'dc5570debc71fc1fe94b1b0aee444fcde5b8cb83d62a6a2b736ead6557d7a2e1',
+            'working_plan' => '{"monday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"tuesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"wednesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"thursday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"friday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"saturday":null,"sunday":null}',
+            'notifications' => FALSE,
+            'google_sync' => FALSE,
+            'sync_past_days' => 5,
+            'sync_future_days' => 5,
+            'calendar_view' => CALENDAR_VIEW_DEFAULT
+        ]
+    ];
+}
+
+function get_dev_provider()
+{
+    return [
+        'first_name' => 'Ashton',
+        'last_name' => 'Meuser',
+        'email' => 'ashton@freshworks.io',
+        'phone_number' => '+ 1(250)412-3470',
+        'services' => [],
+        'settings' => [
+            'username' => 'ashton',
+            'password' => '59fe9d073a9c3c606a7e01e402dca4b49b6aa517bd0fdf940c46cb13a7b63dd0',
+            'salt' => 'dc5570debc71fc1fe94b1b0aee444fcde5b8cb83d62a6a2b736ead6557d7a2e1',
+            'working_plan' => '{"monday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"tuesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"wednesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"thursday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"friday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"saturday":null,"sunday":null}',
+            'notifications' => FALSE,
+            'google_sync' => FALSE,
+            'sync_past_days' => 5,
+            'sync_future_days' => 5,
+            'calendar_view' => CALENDAR_VIEW_DEFAULT
+        ]
+    ];
+}
+
+function get_arch_provider()
+{
+    return [
+        'first_name' => 'Icaro',
+        'last_name' => 'Pacheco',
+        'email' => 'icaro@freshworks.io',
+        'phone_number' => '+ 1(250)412-3470',
+        'services' => [],
+        'settings' => [
+            'username' => 'icaro',
             'password' => '59fe9d073a9c3c606a7e01e402dca4b49b6aa517bd0fdf940c46cb13a7b63dd0',
             'salt' => 'dc5570debc71fc1fe94b1b0aee444fcde5b8cb83d62a6a2b736ead6557d7a2e1',
             'working_plan' => '{"monday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"tuesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"wednesday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"thursday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"friday":{"start":"09:00","end":"18:00","breaks":[{"start":"14:30","end":"15:00"}]},"saturday":null,"sunday":null}',

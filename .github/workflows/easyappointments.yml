@@ -1,0 +1,33 @@
+name: APP1 Micro Service CI CD 
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+    - '/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+    - '/**'
+    
+jobs:
+
+  build-or-deploy:
+    if: 1 == 1
+    env:
+      DEPLOY_ENV: nil
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Build Dockerfile for this APP and push to Registry
+    - name: 'Build & Push to Registry'
+      uses: docker/build-push-action@v1
+      with:
+        path: ./
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        registry: freshregistry.azurecr.io
+        repository: fresh/easyappointments
+        tags: ${{ env.IMAGE_PREFIX }}-latest
+      # if: github.event_name == 'pull_request'

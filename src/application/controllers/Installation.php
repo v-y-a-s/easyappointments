@@ -117,11 +117,33 @@ class Installation extends CI_Controller {
             $this->load->model('services_model');
             $this->load->model('providers_model');
 
-            $sample_service = get_sample_service();
-            $sample_service['id'] = $this->services_model->add($sample_service);
-            $sample_provider = get_sample_provider();
-            $sample_provider['services'][] = $sample_service['id'];
-            $this->providers_model->add($sample_provider);
+			// Create UI Service and Provider
+			$ui_service = get_ui_service();
+			$ui_service['id'] = $this->services_model->add($ui_service);
+			$ui_provider = get_ui_provider();
+			$ui_provider['services'][] = $ui_service['id'];
+			$this->providers_model->add($ui_provider);
+			
+			// Create QA Service and Provider
+			$qa_service = get_qa_service();
+			$qa_service['id'] = $this->services_model->add($qa_service);
+			$qa_provider = get_qa_provider();
+			$qa_provider['services'][] = $qa_service['id'];
+			$this->providers_model->add($qa_provider);
+
+			// Create Dev Service and Provider
+			$dev_service = get_dev_service();
+			$dev_service['id'] = $this->services_model->add($dev_service);
+			$dev_provider = get_dev_provider();
+			$dev_provider['services'][] = $dev_service['id'];
+			$this->providers_model->add($dev_provider);
+
+			// Create Arch Service and Provider
+			$arch_service = get_arch_service();
+			$arch_service['id'] = $this->services_model->add($arch_service);
+			$arch_provider = get_arch_provider();
+			$arch_provider['services'][] = $arch_service['id'];
+			$this->providers_model->add($arch_provider);
 
             $this->output
                 ->set_content_type('application/json')
