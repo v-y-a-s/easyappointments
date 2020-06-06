@@ -3,12 +3,9 @@ name: APP1 Micro Service CI CD
 on:
   push:
     branches: [ master ]
-    paths:
-    - '/**'
   pull_request:
     branches: [ master ]
-    paths:
-    - '/**'
+
     
 jobs:
 
