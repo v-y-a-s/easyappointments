@@ -1,4 +1,4 @@
-name: APP1 Micro Service CI CD 
+name: Build Easy Appointments App
 
 on:
   push:
@@ -26,5 +26,5 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         registry: freshregistry.azurecr.io
         repository: fresh/easyappointments
-        tags: ${{ env.IMAGE_PREFIX }}-latest
+        tags: latest
       # if: github.event_name == 'pull_request'
